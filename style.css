@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #131313;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  transform-style: preserve-3d;
+}
+
+.container .box:nth-child(1) {
+  position: relative;
+  background-image: url('image/capa1.jpg');
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+  margin: 40px;
+
+  border-radius: 20px;
+  transform-style: preserve-3d;
+
+  
+}
+
+.container .box:nth-child(2)  {
+  position: relative;
+  background-image: url('image/capa2.jfif');
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 500px;
+  margin: 40px;
+
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+
+.container .box:nth-child(1)::before{
+  content: 'SIRIUS';
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .box:nth-child(1)::after {
+  content: 'BLACK';
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+
+}
+
+.container .box:nth-child(2)::before{
+  content: 'ALVO';
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+
+  text-align: center;
+
+  text-shadow: 2px 2px 6px #000000;
+}
+
+.container .box:nth-child(2)::after {
+  content: 'Dumbledore ';
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+  text-shadow: 2px 2px 6px #000000;
+
+}
+
+.container .box:hover::before,
+ .container .box:hover::after {
+  opacity: 0.60;
+}
+
+
+.container .box .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container .box:hover .name {
+  top: 200px;
+  opacity: 1;
+  font-size: 25px;
+  text-shadow: 2px 2px 6px #000000;
+  
+}
+
+.container .box .buy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,0,75px);
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.container .box:hover .buy {
+  bottom: 60px;
+  opacity: 1;
+}
+
+.container .box .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  
+  transform-style: preserve-3d;
+  z-index: 1;
+  opacity: 1;
+  transform: translate3d(-50%,-50%,50px);
+}
+
+
+.container .box img.product  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  transition: 0.5s;
+  z-index: 11;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,-50%,50px) ;
+}
+.container .box:hover img.product  {
+  width: 180px;
+  
+}
+
+
+
+
